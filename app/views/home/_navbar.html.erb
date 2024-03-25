@@ -1,0 +1,29 @@
+<nav class="navbar navbar-dark bg-dark" style="background-color: black; font-style: white;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">My Ozone</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="navbar-brand navbar-right">
+        
+      <%= form_tag zipcode_path, :method => 'POST' do %>
+      <div class="form-inline my-2 my-lg-0">
+      <%= text_field_tag 'zipcode', nil, placeholder: "Search Zipcode", class: "form-control mr-sm-2" %>
+      <%= submit_tag 'Search', class: 'btn btn-outline-secondary my-2 my-sm-0' %>
+      </div>
+      <% end %> 
+      
+      </ul>
+     
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
